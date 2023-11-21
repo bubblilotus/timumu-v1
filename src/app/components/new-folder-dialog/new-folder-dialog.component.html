@@ -1,0 +1,24 @@
+
+<div mat-dialog-content class="dialog-box mat-dialog-content">
+    <div class="topbar">
+        <h3>What would you like to name your {{newItemType.toLowerCase()}}?</h3>
+    </div>
+    <div class="input-wrapper">
+        <div></div>
+        <mat-form-field class="form-field">
+            <input matInput class="folder-input" type="text"
+            (keyup.enter) = "submit()"
+            [formControl] = "nameControl">
+        </mat-form-field>
+        <mat-error *ngIf = "nameControl.touched && nameControl.invalid">{{newItemType}} name is required.</mat-error>
+        <div class="dialog-actions">
+            <button mat-button mat-flat-button
+            (click) = "submit()"
+            [disabled] = "nameControl.invalid"
+            >Ok</button>
+            <button mat-button mat-flat-button
+            (click) = "close()">Cancel</button>
+        </div>
+    </div>
+    
+</div>

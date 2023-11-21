@@ -1,0 +1,50 @@
+<div *ngIf = "listId != null"
+class="tasks-container">
+    <div class="task-input-container"
+*ngIf = "showInput">
+    <mat-form-field class="task-form-field">
+        <div class="w">
+            <input 
+            [formControl] = "taskInput"
+            matInput 
+            type="text" 
+            class="task-input item-text"
+            (keyup.enter) = "editMode? updateTask() : addTask()">
+            <button matSuffix mat-icon-button aria-label="close button" 
+            class="task-action"
+            (click) = "closeTask()">
+              <mat-icon>close</mat-icon>
+            </button>
+        </div>
+    </mat-form-field>
+</div>
+<div class="add-task-button-wrapper"
+*ngIf = "!showInput">
+    <button mat-button class="add-task-button"
+    (click) = "toggleShowTaskInput()">+ Add Task</button>
+</div>
+<div class="list-item item" *ngFor="let task of tasks">
+    <button mat-icon-button class="heart-icon"
+    (click) = "toggleCompleted(task)">
+        <mat-icon aria-hidden="false" aria-label="task icon" class="task-icon"
+    [svgIcon]="task.completed? 'heart-filled': 'heart-outline'"></mat-icon></button>
+    <div class="item-text"
+    [ngClass] = "{checked: task.completed}"
+    >{{task.name}}</div>
+    <div class="item-actions">
+        <button 
+        (click) = "editTask(task)"
+        mat-icon-button color="primary" aria-label="Example icon button with a home icon">
+            <mat-icon>edit_note</mat-icon>
+        </button>
+        <button 
+        (click)="deleteTask(task)"
+        mat-icon-button color="accent" aria-label="Example icon button with a menu icon">
+            <mat-icon>delete</mat-icon>
+        </button>
+    </div>
+</div>
+</div>
+<div class="no-list-selected" *ngIf = "listId == null">
+    Please select a list to view tasks.
+</div>

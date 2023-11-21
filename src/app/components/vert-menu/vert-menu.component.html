@@ -1,0 +1,17 @@
+<div class="list-menu">
+    <button mat-icon-button class="menu-actions" [matMenuTriggerFor]="menu">
+        <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item 
+        (click) = "openRenameDialog()"
+        >Rename</button>
+        <button mat-menu-item
+        (click) = "delete()"
+        >delete</button>
+        <button mat-menu-item
+        *ngIf = "itemType == 'list'"
+        (click) = "deleteCompleted()"
+        >delete completed tasks</button>
+    </mat-menu>
+</div>

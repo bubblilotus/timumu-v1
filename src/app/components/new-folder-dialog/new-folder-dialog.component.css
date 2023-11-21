@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+.mat-dialog-content{
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  background-color: #F5ECF0;
+  font-family: 'VT323', monospace;
+  color: #C17792;
+}
+.topbar{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #F5DCE0;
+  margin: 0;
+}
+h3{
+  width: 85%;
+  margin: auto;
+  text-align: center;
+}
+.close-button.mat-icon-button{
+  align-self: flex-end;
+  margin: auto;
+  margin-right: .25em;
+}
+.close-icon{
+}
+.input-wrapper{
+  width: 100%;
+  height: 75%;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+}
+.form-field{
+  width: 85%;
+  text-align: center;
+  margin: auto;
+  color: #e8a4ae;
+  border: 2px solid #ECBDC4;
+  border-radius: 15px;
+}
+.mat-input{
+  width: 80%;
+  text-decoration: none;
+}
+.dialog-actions{
+  justify-self: end;
+  margin-right: 3.25em;
+  color: #EFCFD4;
+}
+.form-field.mat-form-field-underline {
+  /*change color of underline*/
+  display: none;
+} 
+.dialog-actions .mat-button{
+  margin: .25em;
+  background-color: #F5DCE0;
+  border-radius: .58em;
+  font-family: 'VT323', monospace;
+  font-size: 1.5em;
+  color: #e8a4ae;
+}
+.dialog-actions .mat-button:hover{
+  background-color: #ffcdd5 !important;
+}
+.mat-error{
+  text-align: center;
+  font-size: 1.25em;
+  color: rgb(255, 80, 80);
+}
+

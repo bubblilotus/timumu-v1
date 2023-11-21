@@ -1,0 +1,41 @@
+.task-input-container{
+    display: flex;
+    flex-direction: column;
+}
+.mat-input-element{
+    font-size: 1em !important;
+    border-bottom: 1px solid pink;
+}
+.mat-form-field{
+    width: 90%;
+    align-content: center;
+    margin: auto;
+    text-align: center;
+    line-height: 1em;
+}
+.w{
+    display: flex;
+}
+.task-input{
+    width: 90%;
+    line-height: 1.5em;
+}
+.task-action{
+    width: fit-content;
+    height: 1.5em;
+    text-align: center;
+}
+.task-action .mat-icon{
+}
+.add-task-button-wrapper{
+width: 93%;
+display: flex;
+justify-content: center;
+}
+.add-task-button{
+    width: 40%;
+}
+.mat-button-focus-overlay {
+    background-color: transparent!important;
+}
+

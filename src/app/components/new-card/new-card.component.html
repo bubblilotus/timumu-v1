@@ -1,0 +1,25 @@
+<!-- edit task card -->
+<mat-card class="edit-task-card">
+    <mat-form-field>
+        <mat-label>Card Title</mat-label>
+        <input matInput type="text" [(ngModel)] = "cardTitle">
+    </mat-form-field>
+    <mat-form-field *ngFor="let task of tasks; let taskIndex = index" (keyup.enter)="onEnter(taskIndex)"
+    (keyup) = "onKeypress(taskIndex)"
+    >
+    <mat-label>task</mat-label>
+        
+        <div class="task-edit-line">
+            <input matInput [(ngModel)]='task.description'
+        (paste) = "onPaste($event)"
+        class="task-input"
+        >
+        <button 
+        (click) = "deleteTask(taskIndex)"
+        mat-icon-button class="clear-button">
+            <mat-icon>clear</mat-icon>
+          </button>
+        </div>
+        
+</mat-form-field>
+</mat-card>

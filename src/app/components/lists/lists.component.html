@@ -1,0 +1,12 @@
+<div class="subfolder item" *ngFor="let list of lists" 
+[ngClass]="{active: list.id === currentListId}">
+    <div class="list-name" (click)="selectList(list.id)"
+    >{{list.name}}</div>
+    <app-vert-menu
+    [itemType] = "'list'"
+    [editedItem] = list></app-vert-menu>
+</div>
+<div class="subfolder item" (click)="newList()">
+    <mat-icon aria-hidden="false" aria-label="list icon" class="list-icon plus-list" svgIcon="plus-list"></mat-icon>
+    <div class="list-title">New list</div>
+</div>

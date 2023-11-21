@@ -1,0 +1,38 @@
+
+.edit-task-card{
+    width: 95%;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    align-items: center;
+}
+mat-form-field{
+    width: 100%;
+}
+.task-edit-line{
+    width: 100%;
+    display: flex;
+}
+.task-input{
+    height: 2em;
+    width: 100%;
+}
+.add-task-button{
+    margin-top: 1em;
+}
+.clear-button{
+    width: fit-content;
+    height: fit-content;
+    align-content: center;
+    margin-right: .5em;
+    visibility: hidden;
+    color: gainsboro;
+    background: none;
+}
+.task-edit-line:hover .clear-button, .task-edit-line:focus-within .clear-button{
+    visibility: visible;
+}
+.clear-button:hover{
+    color: grey;
+}

@@ -1,0 +1,175 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+box-sizing: border-box;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #F5ECF0; 
+    font-family: 'VT323', monospace;
+    color: #C17792;
+}
+.main-content{
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 1.75em;
+}
+.topbar{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F5DCE0;
+    margin-bottom: 1em;
+    font-size: 2em;
+}
+.brand{
+    text-transform: uppercase;
+    font-size: 2.5em;
+    letter-spacing: .25em;
+}
+.sidebar{
+    width: 35%;
+    display: flex;
+    flex-direction: row;
+    
+    /* border: 1px solid red; */
+}
+.folder-container{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid #ECBDC4;
+    border-right: 1px solid #ECBDC4;
+}
+.item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.5em 0.25em 0.25em .75em;
+}
+.folder-icon{
+    display: inline-block;
+    transform: scale(1.5);
+}
+.plus-list{
+    transform: scale(1.25);
+}
+.folder-title{
+    padding-left: .5em;
+    width: 80%;
+}
+.list-title{
+    margin-left: .5em;
+}
+.folder{
+   
+}
+.folder:hover, .subfolder:hover{
+    cursor: pointer;
+    background-color: #F5DCE0;
+}
+.folder.active, .subfolder.active{
+    background-color: #EFCFD4;
+}
+
+.subfolder-container{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    line-height: 1em;
+    border-right: 1px solid #ECBDC4;
+}
+.list-container{
+    width: 50%;
+    /* border-right: 1px solid #ECBDC4; */
+    padding-left: .5em;
+}
+
+.list-item{
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid #ECBDC4;
+}
+.item-text{
+    text-align: center;
+}
+.list-item button{
+    height: .75em;
+}
+.mat-icon-button .mat-icon:hover{
+    color:#D898AE;
+}
+.mat-icon-button .mat-icon{
+    transform: scale(.75);
+    color: #ECBDC4;
+}
+.heart-icon{
+    height: 1em;
+}
+.heart-icon .mat-icon{
+    transform: scale(1);
+    padding-bottom: .75em;
+    height: fit-content;
+}
+.checked{
+    text-decoration:line-through;
+}
+.my-panel-class .mat-dialog-container{
+    padding: 0px;
+    background-color: #F5ECF0;
+    border-radius: 1em;
+  }
+  .mat-form-field-appearance-legacy .mat-form-field-underline, 
+  .mat-form-field-underline {
+    display: none !important;
+  } 
+.mat-input-element{
+    font-size: 2.5em !important;
+    caret-color: #D898AE;
+    font-family: 'VT323', monospace !important;
+}
+.topbar h3{
+    font-family: 'VT323', monospace !important;
+    font-size: 1.25em;
+    color: #e8a4ae;
+}
+.snackbar-class{
+    background-color:#F5ECF0;
+}
+.mat-simple-snack-bar-content, .mat-simple-snackbar-action button{
+    font-family: 'VT323', monospace !important;
+    font-size: 1.25em;
+    color: #e8a4ae;
+}
+.list-name{
+    width: 85%;
+}
+.section{
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.menu-actions.mat-icon{
+}
+.item:hover .menu-actions{
+    display: flex;
+}
+.menu-actions:hover, .menu-actions:focus{
+    display: flex;
+    color: #e8a4ae;
+}

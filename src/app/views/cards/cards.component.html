@@ -1,0 +1,51 @@
+<div class="wrapper">
+    <div class="search-add">
+    <!-- <app-search-bar></app-search-bar> -->
+        <button mat-stroked-button
+        (click) = "openNewCardDialog()"
+        >+ New Card</button>
+    </div>
+    <div class="grid-container">
+        <mat-card
+        *ngFor = "let card of cards; let cardIndex = index">
+            
+            <div class = "card-header">
+                <div class="card-title" (click) = "openEditCardDialog(cardIndex)">
+                    {{card.title}}
+                </div>
+                <div class="card-menu-actions">
+                    <button mat-icon-button class="kebab-menu-button"
+                    [matMenuTriggerFor] = "menu">
+                        <mat-icon>more_vert</mat-icon>
+                    </button>  
+                    <mat-menu #menu="matMenu">
+                        <button mat-menu-item 
+                        *ngIf = "!card.isPinned"
+                        (click) = "onPin(cardIndex)">pin</button>
+                        <button mat-menu-item (click) = "onUnpin(cardIndex)"
+                        *ngIf = "card.isPinned">unpin</button>
+                        <button mat-menu-item
+                        (click) = "onDelete(cardIndex)">delete</button>
+                        <button mat-menu-item (click) = "onDeleteCompleted(cardIndex)">delete completed tasks</button>
+                      </mat-menu>          
+                </div>
+            </div>
+            <mat-card-content>
+                <div 
+                class="task-item {{task.completed ? 'checked-off' : ''}}" 
+                *ngFor="let task of card.tasks; let taskIndex = index">
+                    <button mat-icon-button 
+                    class="checkbox-button" 
+                    (click)="toggleCompleted(cardIndex, taskIndex)">
+                        <mat-icon>{{task.completed ? 'check_box' : 'check_box_outline_blank'}}</mat-icon>
+                    </button>
+                    <p class="task-text" (click) = "openEditCardDialog(cardIndex)">
+                        {{task.description}}
+                    </p>
+                </div>
+                <div class="footer">...</div>
+            </mat-card-content>
+        </mat-card>
+    
+    </div>
+</div>

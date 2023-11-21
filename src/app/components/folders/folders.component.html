@@ -1,0 +1,17 @@
+    <div class="folder item"
+    *ngFor = "let folder of folders"
+    (click) = "selectFolder(folder.id)"
+    [ngClass] = "{active: folder.id === currentFolderId}">
+        <mat-icon aria-hidden="false" aria-label="folder icon" class="folder-icon"
+            svgIcon="folder"></mat-icon>
+        <div class="folder-title">{{folder.name}}</div>
+        <app-vert-menu
+        [itemType] = "'folder'"
+        [editedItem] = folder></app-vert-menu>
+    </div>
+   <div class="folder item"
+    (click) = "newFolder()">
+        <mat-icon aria-hidden="false" aria-label="folder icon" class="folder-icon plus-folder"
+            svgIcon="plus-folder"></mat-icon>
+        <div class="folder-title">New folder</div>
+    </div>

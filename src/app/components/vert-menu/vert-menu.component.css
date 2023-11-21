@@ -1,0 +1,16 @@
+.menu-actions{
+    display: none;
+    width: fit-content;
+    height: 1em;
+    color: #fdb9c4;
+    align-items: center;
+}
+.mat-menu-item{
+    background-color: #F5ECF0;
+    font-family: 'VT323', monospace !important;
+    font-size: 1.25em;
+    color: #e8a4ae;
+}
+.mat-menu-item:hover{
+    background-color: #F5DCE0 !important;
+}
